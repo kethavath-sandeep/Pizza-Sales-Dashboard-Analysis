@@ -1,5 +1,5 @@
 # Pizza-Sales-Dashboard-Analysis
-![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521)
+![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Pizza.jpeg?raw=true)
 ## Overview
 This project involves the development of a comprehensive Pizza Sales Dashboard, designed to analyze sales performance, identify revenue drivers, and provide actionable insights for business growth. The dashboard integrates SQL queries for data extraction and Power BI for visualization, enabling effective decision-making.
 
@@ -120,9 +120,9 @@ GROUP BY pizza_category;
 - **Line Graphs:** Revenue and order trends over time.
 - **Tables:** Summary of key metrics.
 
-![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521)
+![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Dashboard-1.png?raw=true)
 
-![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521)
+![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Dashboard-2.png?raw=true)
 
 ## Insights
 1. **Revenue Drivers:** Identify top-performing pizza categories and focus promotional efforts on them.
