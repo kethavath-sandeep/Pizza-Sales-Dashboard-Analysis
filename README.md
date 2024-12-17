@@ -1,5 +1,5 @@
 # Pizza-Sales-Dashboard-Analysis
-![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521).
+![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521)
 ## Overview
 This project involves the development of a comprehensive Pizza Sales Dashboard, designed to analyze sales performance, identify revenue drivers, and provide actionable insights for business growth. The dashboard integrates SQL queries for data extraction and Power BI for visualization, enabling effective decision-making.
 
@@ -44,7 +44,7 @@ SELECT * FROM pizza_sales;
 ```
 
 Table 'pizza_sales' has 12 columns and 48,620 rows
-![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Pizza%20sales.png?raw=true).
+![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Pizza%20sales.png?raw=true)
 
 ### 2. Total Revenue:
 ```sql
@@ -56,25 +56,25 @@ SELECT SUM(total_price) AS total_revenue FROM pizza_sales;
 ```sql
 SELECT SUM(total_price)/COUNT(DISTINCT order_id) AS Avg_order_value FROM pizza_sales;
 ```
-![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Avg%20Order%20value.png?raw=true).
+![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Avg%20Order%20value.png?raw=true)
 
 ### 4. Total Pizzas Sold:
 ```sql
 SELECT SUM(quantity) AS total_pizza_sold FROM pizza_sales;
 ```
-![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Total%20pizza%20sold.png?raw=true).
+![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Total%20pizza%20sold.png?raw=true)
 
 ### 5. Total Orders:
 ```sql
 SELECT COUNT(DISTINCT order_id) AS total_orders FROM pizza_sales;
 ```
-![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Total%20orders.png?raw=true).
+![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Total%20orders.png?raw=true)
 
 ### 6. Average Pizzas Per Order:
 ```sql
 SELECT CAST(SUM(quantity) AS DECIMAL(10,2)) / COUNT(DISTINCT order_id) AS Avg_Pizzas_per_order FROM pizza_sales;
 ```
-![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Avg%20pizza%20per%20order.png?raw=true).
+![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Avg%20pizza%20per%20order.png?raw=true)
 
 ### 7. Orders by Day of the Week:
 ```sql
@@ -82,7 +82,7 @@ SELECT DATENAME(DW, order_date) AS order_day, COUNT(DISTINCT order_id) AS total_
 FROM pizza_sales
 GROUP BY DATENAME(DW, order_date);
 ```
-![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Orders%20by%20day%20in%20week.png?raw=true).
+![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Orders%20by%20day%20in%20week.png?raw=true)
 
 ### 8. Orders by Month:
 ```sql
@@ -91,7 +91,7 @@ FROM pizza_sales
 GROUP BY DATENAME(MONTH, order_date)
 ORDER BY Total_Orders DESC;
 ```
-![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Orders%20by%20months.png?raw=true).
+![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Orders%20by%20months.png?raw=true)
 
 ### 9. Revenue by Pizza Category:
 ```sql
@@ -100,7 +100,7 @@ SELECT pizza_category, SUM(total_price) AS total_revenue,
 FROM pizza_sales
 GROUP BY pizza_category;
 ```
-![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Revenue%20by%20pizza%20catogery.png?raw=true).
+![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Revenue%20by%20pizza%20catogery.png?raw=true)
 
 
 ## KPIs and Visualizations
@@ -120,7 +120,9 @@ GROUP BY pizza_category;
 - **Line Graphs:** Revenue and order trends over time.
 - **Tables:** Summary of key metrics.
 
+![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521)
 
+![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521)
 
 ## Insights
 1. **Revenue Drivers:** Identify top-performing pizza categories and focus promotional efforts on them.
@@ -135,12 +137,6 @@ GROUP BY pizza_category;
 2. **Complex SQL Logic:** Ensured precise calculations for metrics like percentages and averages.
 3. **Stakeholder Alignment:** Incorporated feedback to meet business requirements.
 
-
-## Tools and Techniques Used
-- **SQL:** For data extraction and KPI calculations.
-- **Power BI:** For interactive visualizations and dashboard creation.
-- **DAX:** For creating calculated measures and additional insights.
-- **Excel:** For preliminary data exploration and cleaning.
 
 
 
