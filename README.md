@@ -1,5 +1,5 @@
 # Pizza-Sales-Dashboard-Analysis
-
+![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521).
 ## Overview
 This project involves the development of a comprehensive Pizza Sales Dashboard, designed to analyze sales performance, identify revenue drivers, and provide actionable insights for business growth. The dashboard integrates SQL queries for data extraction and Power BI for visualization, enabling effective decision-making.
 
@@ -43,30 +43,38 @@ The objective is to monitor and analyze pizza sales performance, identify revenu
 SELECT * FROM pizza_sales;
 ```
 
+Table 'pizza_sales' has 12 columns and 48,620 rows
+![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521).
+
 ### 2. Total Revenue:
 ```sql
 SELECT SUM(total_price) AS total_revenue FROM pizza_sales;
 ```
+![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521).
 
 ### 3. Average Order Value:
 ```sql
 SELECT SUM(total_price)/COUNT(DISTINCT order_id) AS Avg_order_value FROM pizza_sales;
 ```
+![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521).
 
 ### 4. Total Pizzas Sold:
 ```sql
 SELECT SUM(quantity) AS total_pizza_sold FROM pizza_sales;
 ```
+![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521).
 
 ### 5. Total Orders:
 ```sql
 SELECT COUNT(DISTINCT order_id) AS total_orders FROM pizza_sales;
 ```
+![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521).
 
 ### 6. Average Pizzas Per Order:
 ```sql
 SELECT CAST(SUM(quantity) AS DECIMAL(10,2)) / COUNT(DISTINCT order_id) AS Avg_Pizzas_per_order FROM pizza_sales;
 ```
+![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521).
 
 ### 7. Orders by Day of the Week:
 ```sql
@@ -74,6 +82,7 @@ SELECT DATENAME(DW, order_date) AS order_day, COUNT(DISTINCT order_id) AS total_
 FROM pizza_sales
 GROUP BY DATENAME(DW, order_date);
 ```
+![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521).
 
 ### 8. Orders by Month:
 ```sql
@@ -82,6 +91,7 @@ FROM pizza_sales
 GROUP BY DATENAME(MONTH, order_date)
 ORDER BY Total_Orders DESC;
 ```
+![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521).
 
 ### 9. Revenue by Pizza Category:
 ```sql
@@ -90,7 +100,7 @@ SELECT pizza_category, SUM(total_price) AS total_revenue,
 FROM pizza_sales
 GROUP BY pizza_category;
 ```
-
+![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521).
 
 
 ## KPIs and Visualizations
