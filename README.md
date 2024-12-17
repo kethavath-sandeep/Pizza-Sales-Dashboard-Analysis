@@ -44,13 +44,13 @@ SELECT * FROM pizza_sales;
 ```
 
 Table 'pizza_sales' has 12 columns and 48,620 rows
-![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Pizza%20sales.png?raw=true).
+![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Pizza%20sales.png?raw=true).
 
 ### 2. Total Revenue:
 ```sql
 SELECT SUM(total_price) AS total_revenue FROM pizza_sales;
 ```
-![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Total%20revenue%20(2).png?raw=true).
+![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Total%20revenue%20(2).png?raw=true)
 
 ### 3. Average Order Value:
 ```sql
