@@ -44,37 +44,37 @@ SELECT * FROM pizza_sales;
 ```
 
 Table 'pizza_sales' has 12 columns and 48,620 rows
-![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521).
+![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Pizza%20sales.png?raw=true).
 
 ### 2. Total Revenue:
 ```sql
 SELECT SUM(total_price) AS total_revenue FROM pizza_sales;
 ```
-![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521).
+![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Total%20revenue%20(2).png?raw=true).
 
 ### 3. Average Order Value:
 ```sql
 SELECT SUM(total_price)/COUNT(DISTINCT order_id) AS Avg_order_value FROM pizza_sales;
 ```
-![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521).
+![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Avg%20Order%20value.png?raw=true).
 
 ### 4. Total Pizzas Sold:
 ```sql
 SELECT SUM(quantity) AS total_pizza_sold FROM pizza_sales;
 ```
-![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521).
+![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Total%20pizza%20sold.png?raw=true).
 
 ### 5. Total Orders:
 ```sql
 SELECT COUNT(DISTINCT order_id) AS total_orders FROM pizza_sales;
 ```
-![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521).
+![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Total%20orders.png?raw=true).
 
 ### 6. Average Pizzas Per Order:
 ```sql
 SELECT CAST(SUM(quantity) AS DECIMAL(10,2)) / COUNT(DISTINCT order_id) AS Avg_Pizzas_per_order FROM pizza_sales;
 ```
-![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521).
+![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Avg%20pizza%20per%20order.png?raw=true).
 
 ### 7. Orders by Day of the Week:
 ```sql
@@ -82,7 +82,7 @@ SELECT DATENAME(DW, order_date) AS order_day, COUNT(DISTINCT order_id) AS total_
 FROM pizza_sales
 GROUP BY DATENAME(DW, order_date);
 ```
-![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521).
+![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Orders%20by%20day%20in%20week.png?raw=true).
 
 ### 8. Orders by Month:
 ```sql
@@ -91,7 +91,7 @@ FROM pizza_sales
 GROUP BY DATENAME(MONTH, order_date)
 ORDER BY Total_Orders DESC;
 ```
-![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521).
+![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Orders%20by%20months.png?raw=true).
 
 ### 9. Revenue by Pizza Category:
 ```sql
@@ -100,7 +100,7 @@ SELECT pizza_category, SUM(total_price) AS total_revenue,
 FROM pizza_sales
 GROUP BY pizza_category;
 ```
-![image](https://github.com/user-attachments/assets/9a3595c1-af27-4e64-a31c-1ec771ec2521).
+![image](https://github.com/kethavath-sandeep/SQL-PowerBI-Project/blob/main/Revenue%20by%20pizza%20catogery.png?raw=true).
 
 
 ## KPIs and Visualizations
